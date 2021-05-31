@@ -959,8 +959,11 @@ body {
     }
 
     .jobCard {
-        width: 75vw;
-        height: 75vw;
+        height: 350px;
+    }
+
+    .employerLabel {
+        font-size: 2em;
     }
 
     .collage {
