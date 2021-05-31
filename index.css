@@ -897,6 +897,10 @@ body {
 
 /* Mobile View */
 @media only screen and (max-width: 700px) {
+    .callToAction div {
+        width: 80%;
+    }
+
     @keyframes grow {
         from{width: 0px;}
         to{width: 70vw;}
