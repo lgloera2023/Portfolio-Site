@@ -5,22 +5,32 @@ body {
 }
 
 .intro {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color:black;
     color: white;
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.generalInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .name {
     position: relative;
-    top: 30%;
     opacity: 0;
     animation-name: appear;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
+    font-size: 7em;
+    text-align: center;
 }
 
 @keyframes appear {
@@ -28,20 +38,11 @@ body {
     to {opacity: 1;}
 }
 
-.name span {
-    font-size: 7em;
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .animatedBar {
     background-color: white;
     height: 5px;
-    width: 0px;
-    position: absolute;
-    top: 45%;
+    width: 0%;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     animation-name: grow;
@@ -53,31 +54,32 @@ body {
 }
 
 @keyframes grow {
-    from{width: 0px;}
-    to{width: 550px;}
+    from{width: 0%;}
+    to{width: 100%;}
 }
 
 .role {
-    position: absolute;
-    top: 47%;
+    position: relative;
+    margin-top: 15px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
     z-index: 0;
     white-space: nowrap;
+    text-align: center;
 }
 
 .leftCurtain {
     background-color: black;
     left: 0;
-    height: 10vh;
-    width: 50vw;
+    top: 0;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 47%;
-    animation-name: shrink;
-    animation-duration: 4s;
+    animation-name: shrink1;
+    animation-duration: 1.75s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-delay: 2s;
     z-index: 1;
 }
@@ -85,17 +87,22 @@ body {
 .rightCurtain {
     background-color: black;
     right: 0;
-    height: 10vh;
-    width: 50vw;
+    top: 0;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 47%;
-    animation-name: shrink;
-    animation-duration: 4s;
+    animation-name: shrink1;
+    animation-duration: 1.75s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
     animation-delay: 2s;
     z-index: 1;
+}
+
+@keyframes shrink1 {
+    from{width: 50%;}  
+    to{width: 0%;} 
 }
 
 @keyframes shrink {
@@ -104,9 +111,9 @@ body {
 }
 
 .callToAction {
-    position: absolute;
-    width: 100%;
-    top: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 2.5em;
     opacity: 0;
@@ -230,7 +237,9 @@ body {
 
 .invitation {
     position: relative;
-    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
     text-align: center;
     font-size: 2em;
     z-index: 0;
@@ -256,13 +265,13 @@ body {
 }
 
 .card {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
     height: 420px;
     width: 450px;
     background-color: #17141d;
     border-radius: 10px;
     box-shadow: -1rem 0 3rem #000;
-  /*   margin-left: -50px; */
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
@@ -283,20 +292,24 @@ body {
     transition: 0.4s ease-out;
 }
 
-.title {
+.titleBox {
+    display: flex;
+    align-items: center;
     color: wheat;
     font-weight: 300;
-    position: absolute;
-    left: 20px;
-    top: 5px;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.title {
+    margin-left: 20px;
 }
 
 .bar {
-    position: absolute;
-    top: 55px;
-    left: 20px;
+    position: relative;
     height: 5px;
-    width: 150px;
+    width: 100%;
+    margin-top: 5px;
 }
 
 .emptybar {
@@ -307,8 +320,8 @@ body {
 
 .filledbar {
     position: absolute;
-    top: 0px;
-    z-index: 3;
+    top: 0;
+    z-index: 1;
     width: 0px;
     height: 100%;
     background: white;
@@ -317,20 +330,16 @@ body {
 }
 
 .card:hover .filledbar {
-    width: 150px;
-    transition: 0.4s ease-out;
+    width: 100%;
 }
 
 .card ul {
-    align-self: flex-end;
-    padding-bottom: 1.5em;
     color: wheat;
-}
-
-.card li {
-    font-size: large;
-    padding-bottom: 1.25em;
-    padding-right: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 25px;
+    padding-bottom: 25px;
 }
 
 .gradient_text {
@@ -350,6 +359,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.projects .invitation {
+    left: 0;
+    transform: translateX(0%);
 }
 
 .projectCard {
@@ -882,43 +896,13 @@ body {
 
 /* Mobile View */
 @media only screen and (max-width: 700px) {
-    .name {
-        top: 10%;
-    }
-
-    .name span {
-        font-size: 6em;
-        text-align: center;
-    }
-
-    .animatedBar {
-        top: 40%;
-    }
-
     @keyframes grow {
         from{width: 0px;}
         to{width: 70vw;}
     }
 
-    .role {
-        top: 42%;
-    }
-
-    .leftCurtain {
-        top: 42%;
-        animation-duration: 2s;
-    }
-
-    .rightCurtain {
-        top: 42%;
-        animation-duration: 2s;
-    }
-    
-    .callToAction {
-        font-size: 2em;
-        width: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+    .sectionHeader {
+        font-size: 4.5em;
     }
 
     .aboutCard {
@@ -943,6 +927,21 @@ body {
 
     .card:not(:first-child) {
         margin-left: 0px;
+    }
+
+    .card:active {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+    }
+    
+    .card:active ~ .card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+    }
+
+    .card:active .filledbar {
+        width: 100%;
     }
 
     .projContent {
@@ -989,7 +988,6 @@ body {
     }
 
     .contactBox a {
-
-        font-size: 1.75em;
+        font-size: 1.5em;
     }
 }
