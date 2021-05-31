@@ -930,18 +930,18 @@ body {
         margin-left: 0px;
     }
 
-    .card:active {
+    .card:click {
         transform: translateY(-20px);
         transition: 0.4s ease-out;
     }
     
-    .card:active ~ .card {
+    .card:click ~ .card {
         position: relative;
         left: 50px;
         transition: 0.4s ease-out;
     }
 
-    .card:active .filledbar {
+    .card:click .filledbar {
         width: 100%;
     }
 
