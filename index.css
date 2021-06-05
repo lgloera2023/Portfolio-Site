@@ -1,1002 +1,1028 @@
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .intro {
-    min-height: 100vh;
-    width: 100vw;
-    background-color:black;
-    color: white;
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .generalInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .name {
-    position: relative;
-    opacity: 0;
-    animation-name: appear;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    font-size: 7em;
-    text-align: center;
+  position: relative;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  font-size: 7em;
+  text-align: center;
 }
 
 @keyframes appear {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .animatedBar {
-    background-color: white;
-    height: 5px;
-    width: 0%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-name: grow;
-    animation-iteration-count: 1;
-    animation-duration: 1.75s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  background-color: white;
+  height: 5px;
+  width: 0%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: grow;
+  animation-iteration-count: 1;
+  animation-duration: 1.75s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 
 @keyframes grow {
-    from{width: 0%;}
-    to{width: 100%;}
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .role {
-    position: relative;
-    margin-top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
-    z-index: 0;
-    white-space: nowrap;
-    text-align: center;
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  z-index: 0;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .leftCurtain {
-    background-color: black;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    animation-name: shrink1;
-    animation-duration: 1.75s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-delay: 2s;
-    z-index: 1;
+  background-color: black;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: shrink1;
+  animation-duration: 1.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  z-index: 1;
 }
 
 .rightCurtain {
-    background-color: black;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    animation-name: shrink1;
-    animation-duration: 1.75s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-delay: 2s;
-    z-index: 1;
+  background-color: black;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: shrink1;
+  animation-duration: 1.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  z-index: 1;
 }
 
 @keyframes shrink1 {
-    from{width: 50%;}  
-    to{width: 0%;} 
+  from {
+    width: 50%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 @keyframes shrink {
-    from{width: 50vw;}  
-    to{width: 0vw;} 
+  from {
+    width: 50vw;
+  }
+  to {
+    width: 0vw;
+  }
 }
 
 .callToAction {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2.5em;
-    opacity: 0;
-    animation-name: appear;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5em;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
 }
 
 .about {
-    background-color: white;
-    width: 100vw;
-    margin-top: 25vh;
-    padding-top: 15vh;
-    padding-bottom: 25vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  background-color: white;
+  width: 100vw;
+  margin-top: 25vh;
+  padding-top: 15vh;
+  padding-bottom: 25vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .about a img {
-    height: 250px;
-    border-radius: 10px;
-    margin-top: 25px;
-    transition: 0.25s ease-in-out;
+  height: 250px;
+  border-radius: 10px;
+  margin-top: 25px;
+  transition: 0.25s ease-in-out;
 }
 
 .about a img:hover {
-    box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 20px black;
 }
 
 #resume {
-    margin-top: 25px;
-    text-decoration: none;
-    background-color:#17141d;
-    color: wheat;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 2em;
-    font-weight: bold;
-    max-width: 80vw;
-    text-align: center;
+  margin-top: 25px;
+  text-decoration: none;
+  background-color: #17141d;
+  color: wheat;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 2em;
+  font-weight: bold;
+  max-width: 80vw;
+  text-align: center;
 }
 
 #resume:hover {
-    box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 20px black;
 }
 
 .about p {
-    text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    font-size: 2em;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 2em;
 }
 
 .about h2 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .aboutCard {
-    background-color: #17141d;
-    box-shadow: 0px 0px 20px black;
-    border-radius: 10px;
-    width: 60vw;
-    color: wheat;
+  background-color: #17141d;
+  box-shadow: 0px 0px 20px black;
+  border-radius: 10px;
+  width: 60vw;
+  color: wheat;
 }
 
 .school {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .sectionHeader {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    color: wheat;
-    font-size: 5em;
-    text-align: center;
-    z-index: 2;
-    font-weight: bold;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  color: wheat;
+  font-size: 5em;
+  text-align: center;
+  z-index: 2;
+  font-weight: bold;
 }
 
 .fade-to-black {
-    animation-name: toBlack;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation-name: toBlack;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes toBlack {
-    from {color: wheat;}
-    to {color: black;}
+  from {
+    color: wheat;
+  }
+  to {
+    color: black;
+  }
 }
 
 .leftSectionCurtain {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 50vw;
-    background-color: black;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 50vw;
+  background-color: black;
+  z-index: 1;
 }
 
 .rightSectionCurtain {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100px;
-    width: 50vw;
-    background-color: black;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 50vw;
+  background-color: black;
+  z-index: 1;
 }
 
 .invitation {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
-    text-align: center;
-    font-size: 2em;
-    z-index: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  text-align: center;
+  font-size: 2em;
+  z-index: 0;
 }
 
 .invitation a {
-    text-decoration: underline;
-    color: black;
+  text-decoration: underline;
+  color: black;
 }
 
 .invitation a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .schoolWrapper {
-    position: relative;
-    width: 90vw;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+  position: relative;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 .card {
-    display: grid;
-    grid-template-rows: 1fr 5fr;
-    height: 420px;
-    width: 450px;
-    background-color: #17141d;
-    border-radius: 10px;
-    box-shadow: -1rem 0 3rem #000;
-    transition: 0.4s ease-out;
-    position: relative;
-    left: 0px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  height: 420px;
+  width: 450px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
 }
 
 .card:not(:first-child) {
-    margin-left: -50px;
+  margin-left: -50px;
 }
 
 .card:hover {
-    transform: translateY(-20px);
-    transition: 0.4s ease-out;
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
 }
 
 .card:hover ~ .card {
-    position: relative;
-    left: 50px;
-    transition: 0.4s ease-out;
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
 }
 
 .titleBox {
-    display: flex;
-    align-items: center;
-    color: wheat;
-    font-weight: 300;
-    font-size: 1.5em;
-    position: relative;
+  display: flex;
+  align-items: center;
+  color: wheat;
+  font-weight: 300;
+  font-size: 1.5em;
+  position: relative;
 }
 
 .title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .bar {
-    position: relative;
-    height: 5px;
-    width: 100%;
-    margin-top: 5px;
+  position: relative;
+  height: 5px;
+  width: 100%;
+  margin-top: 5px;
 }
 
 .emptybar {
-    background-color: #2e3033;
-    width: 100%;
-    height: 100%;
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
 }
 
 .filledbar {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 0px;
-    height: 100%;
-    background: white;
-    background: linear-gradient(90deg, black 0%, maroon 55%, wheat 100%);
-    transition: 0.6s ease-out;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 0px;
+  height: 100%;
+  background: white;
+  background: linear-gradient(90deg, black 0%, maroon 55%, wheat 100%);
+  transition: 0.6s ease-out;
 }
 
 .card:hover .filledbar {
-    width: 100%;
+  width: 100%;
 }
 
 .card ul {
-    color: wheat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-right: 25px;
-    padding-bottom: 25px;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 25px;
+  padding-bottom: 25px;
 }
 
 .gradient_text {
-    font-weight: bold;
-    background: -webkit-radial-gradient(wheat, maroon);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  background: -webkit-radial-gradient(wheat, maroon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .projects {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .projects .invitation {
-    left: 0;
-    transform: translateX(0%);
+  left: 0;
+  transform: translateX(0%);
 }
 
 .projectCard {
-    width: 75vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 5vh;
-    background-color: #17141d;
-    color: wheat;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px black;
+  width: 75vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 5vh;
+  background-color: #17141d;
+  color: wheat;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
 }
 
 .projTitle {
-    text-align: center;
-    font-weight: bold;
-    font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
 }
 
 .projContent {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 15px;
-    column-gap: 25px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 15px;
+  column-gap: 25px;
 }
 
 .projDescription {
-    font-size: 1.5em;
-    display: flex;
-    text-align: center;
-    align-items: center;
+  font-size: 1.5em;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .projPic a {
-    text-decoration: underline;
-    color: wheat;
+  text-decoration: underline;
+  color: wheat;
 }
 
 .projPic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projPic img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }
 
 #wedSiteImg {
-    max-height: 400px;
-    transition: 0.25s ease-in-out;
+  max-height: 400px;
+  transition: 0.25s ease-in-out;
 }
 
 #wedSiteImg:hover {
-    box-shadow: 0px 0px 20px white;
+  box-shadow: 0px 0px 20px white;
 }
 
 #podiumImg {
-    max-height: 400px;
-    transition: 0.25s ease-in-out;
+  max-height: 400px;
+  transition: 0.25s ease-in-out;
 }
 
 #podiumImg:hover {
-    box-shadow: 0px 0px 20px wheat;
+  box-shadow: 0px 0px 20px wheat;
 }
 
 #ironmanImg {
-    max-height: 400px;
-    transition: 0.25s ease-in-out;
+  max-height: 400px;
+  transition: 0.25s ease-in-out;
 }
 
 #ironmanImg:hover {
-    box-shadow: 0px 0px 20px wheat;
+  box-shadow: 0px 0px 20px wheat;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .show {
-    display: relative;
+  display: relative;
 }
 
 #projectBtn {
-    background-color: #17141d;
-    color: wheat;
-    font-weight: bold;
-    font-size: 13px;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-    border: none;
-    transition: 0.25s ease-in-out;
+  background-color: #17141d;
+  color: wheat;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  transition: 0.25s ease-in-out;
 }
 
 #projectBtn:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 10px black;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px black;
 }
 
 #projectBtn:active {
-    box-shadow: inset 0px 0px 10px wheat;
+  box-shadow: inset 0px 0px 10px wheat;
 }
 
 .work {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .workContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .jobCard {
-    min-width: 300px;
-    min-height: 300px;
-    height: 25vw;
-    width: 25vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 2.5vh;
-    background-color: #17141d;
-    color: wheat;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  min-width: 300px;
+  min-height: 300px;
+  height: 25vw;
+  width: 25vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  padding: 2.5vh;
+  background-color: #17141d;
+  color: wheat;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .employerLabel {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
-.position, .timeAtJob {
-    font-size: 1.5em;
+.position,
+.timeAtJob {
+  font-size: 1.5em;
 }
 
 .jobCard .logo img {
-    height: 150px;
+  height: 150px;
 }
 
 .jobCard button {
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.25s ease-in-out;
-    font-weight: bold;
-    z-index: 2;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
+  font-weight: bold;
+  z-index: 2;
 }
 
 .collapsedBtn {
-    color: wheat;
-    background-color: #17141d;
-    animation-name: toWheatBtn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  color: wheat;
+  background-color: #17141d;
+  animation-name: toWheatBtn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes toWheatBtn {
-    from {
-        color: wheat;
-        background-color: #17141d;
-    }
-    to {
-        background-color: wheat;
-        color: #17141d;
-    }
+  from {
+    color: wheat;
+    background-color: #17141d;
+  }
+  to {
+    background-color: wheat;
+    color: #17141d;
+  }
 }
 
 .collapsedBtn:hover {
-    box-shadow: 0px 0px 10px wheat;
-    cursor: pointer;
+  box-shadow: 0px 0px 10px wheat;
+  cursor: pointer;
 }
 
 .collapsedBtn:active {
-    box-shadow: inset 0px 0px 10px black;
+  box-shadow: inset 0px 0px 10px black;
 }
 
 .expandedBtn {
-    color: #17141d;
-    background-color: wheat;
-    animation-name: toBlackBtn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  color: #17141d;
+  background-color: wheat;
+  animation-name: toBlackBtn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes toBlackBtn {
-    from {
-        background-color: wheat;
-        color: #17141d;
-    }
-    to {
-        color: wheat;
-        background-color: #17141d;
-    }
+  from {
+    background-color: wheat;
+    color: #17141d;
+  }
+  to {
+    color: wheat;
+    background-color: #17141d;
+  }
 }
 
 .expandedBtn:hover {
-    box-shadow: 0px 0px 10px black;
-    cursor: pointer;
+  box-shadow: 0px 0px 10px black;
+  cursor: pointer;
 }
 
 .expandedBtn:active {
-    box-shadow: inset 0px 0px 10px wheat;
+  box-shadow: inset 0px 0px 10px wheat;
 }
 
 .jobDescription {
-    position: absolute;
-    height: 102%;
-    width: 102%;
-    background-color: wheat;
-    color: #17141d;
-    font-size: 1.25em;
-    top: 0;
-    transform: translateY(101%);
-    z-index: 1;
+  position: absolute;
+  height: 102%;
+  width: 102%;
+  background-color: wheat;
+  color: #17141d;
+  font-size: 1.25em;
+  top: 0;
+  transform: translateY(101%);
+  z-index: 1;
 }
 
 .jobDescription ul {
-    height: 75%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 25px;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 25px;
 }
 
 .slide-up {
-    animation-name: slideUp;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(101%);
-        -webkit-transform: translateY(101%);
-        -moz-transform: translateY(101%);
-        -o-transform: translateY(101%);
-        -ms-transform: translateY(101%);
-    }
-    to {
-        transform: translateY(0%);
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-    }
+  from {
+    transform: translateY(101%);
+    -webkit-transform: translateY(101%);
+    -moz-transform: translateY(101%);
+    -o-transform: translateY(101%);
+    -ms-transform: translateY(101%);
+  }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+  }
 }
 
 .slide-down {
-    animation-name: slideDown;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideDown {
-    from {
-        transform: translateY(0%);
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-    }
-    to {
-        transform: translateY(101%);
-        -webkit-transform: translateY(101%);
-        -moz-transform: translateY(101%);
-        -o-transform: translateY(101%);
-        -ms-transform: translateY(101%);
-    }
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+  }
+  to {
+    transform: translateY(101%);
+    -webkit-transform: translateY(101%);
+    -moz-transform: translateY(101%);
+    -o-transform: translateY(101%);
+    -ms-transform: translateY(101%);
+  }
 }
 
 .activities {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .collage {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
-    background-color:#17141d;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px black;
-    padding: 25px;
-    display: grid;
-    grid-template-areas: 
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  padding: 25px;
+  display: grid;
+  grid-template-areas:
     "one one one two two two"
     "three three four four five five";
-    text-align: center;
-    grid-gap: 25px 25px;
+  text-align: center;
+  grid-gap: 25px 25px;
 }
 
 .activityTitle {
-    color: wheat;
-    font-size: 2em;
-    background-color:#17141d;
-    width: 100%;
-    position: relative;
-    top: 25px;
+  color: wheat;
+  font-size: 2em;
+  background-color: #17141d;
+  width: 100%;
+  position: relative;
+  top: 25px;
 }
 
 .collageItem {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 350px;
-    border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  border-radius: 10px;
 }
 
 #a1 {
-    grid-area: one;
-    background-image: url('marinesActivities.jpg');
+  grid-area: one;
+  background-image: url("marinesActivities.jpg");
 }
 
 #a2 {
-    grid-area: two;
-    background-image: url('reconLogo.png');
+  grid-area: two;
+  background-image: url("reconLogo.png");
 }
 
 #a3 {
-    grid-area: three;
-    background-image: url('brkawy.jpg');
+  grid-area: three;
+  background-image: url("brkawy.jpg");
 }
 
 #a4 {
-    grid-area: four;
-    background-image: url('triathlon.jpg');
+  grid-area: four;
+  background-image: url("triathlon.jpg");
 }
 
 #a5 {
-    grid-area: five;
-    background-image: url('navigators.png');
+  grid-area: five;
+  background-image: url("navigators.png");
 }
 
 .skills {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .skillBox {
-    height: 675px;
-    width: 1250px;
-    background-color:#17141d;
-    border-radius: 10px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0px 0px 20px black;
-    z-index: 0;
+  height: 675px;
+  width: 1250px;
+  background-color: #17141d;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 20px black;
+  z-index: 0;
 }
 
 .skillBox ul {
-    background-color: wheat;
-    color:#17141d;
-    box-shadow: 0px 0px 20px wheat;
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.5em;
-    z-index: 2;
+  background-color: wheat;
+  color: #17141d;
+  box-shadow: 0px 0px 20px wheat;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.5em;
+  z-index: 2;
 }
 
 .level1 {
-    z-index: 1;
+  z-index: 1;
 }
 
 .level3 {
-    z-index: 3;
+  z-index: 3;
 }
 
 .skillBubble {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 5px solid wheat;
-    background-color: white;
-    box-shadow: 0px 0px 10px black;
-    top: 0px;
-    left: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid wheat;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .pythonLogo {
-    background-image: url("Skills/pythonLogo.png");
+  background-image: url("Skills/pythonLogo.png");
 }
 
 .cppLogo {
-    background-image: url("Skills/cppLogo.png");
+  background-image: url("Skills/cppLogo.png");
 }
 
 .javaLogo {
-    background-image: url("Skills/javaLogo.png");
+  background-image: url("Skills/javaLogo.png");
 }
 
 .htmlLogo {
-    background-image: url("Skills/htmlLogo.png");
+  background-image: url("Skills/htmlLogo.png");
 }
 
 .cssLogo {
-    background-image: url("Skills/cssLogo.png");
+  background-image: url("Skills/cssLogo.png");
 }
 
 .javascriptLogo {
-    background-image: url("Skills/javascriptLogo.png");
+  background-image: url("Skills/javascriptLogo.png");
 }
 
 .wordLogo {
-    background-image: url("Skills/wordLogo.png");
+  background-image: url("Skills/wordLogo.png");
 }
 
 .excelLogo {
-    background-image: url("Skills/excelLogo.png");
+  background-image: url("Skills/excelLogo.png");
 }
 
 .accessLogo {
-    background-image: url("Skills/accessLogo.png");
+  background-image: url("Skills/accessLogo.png");
 }
 
 .powerPointLogo {
-    background-image: url("Skills/powerPointLogo.png");
+  background-image: url("Skills/powerPointLogo.png");
 }
 
 .solderingLogo {
-    background-image: url("Skills/soldering.JPG");
+  background-image: url("Skills/soldering.JPG");
 }
 
 .scubaLogo {
-    background-image: url("Skills/scuba.JPG");
+  background-image: url("Skills/scuba.JPG");
 }
 
 .contact {
-    background-color: white;
-    width: 100vw;
-    position: relative;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .contactBox {
-    width: 80vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color:#17141d;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px black;
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 100px;
-    align-items: center;
-    justify-content: space-around;
+  width: 80vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px black;
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .contactBox a {
-    text-decoration: none;
-    color:#17141d;
-    font-weight: bold;
-    font-size: 2.5em;
-    background-color: wheat;
-    border-radius: 10px;
-    padding: 10px;
-    transition: 0.25s ease-in-out;
-    margin: 25px;
+  text-decoration: none;
+  color: #17141d;
+  font-weight: bold;
+  font-size: 2.5em;
+  background-color: wheat;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.25s ease-in-out;
+  margin: 25px;
 }
 
 .contactBox a:hover {
-    box-shadow: 0px 0px 20px wheat;
+  box-shadow: 0px 0px 20px wheat;
 }
 
 .contactBox a:active {
-    box-shadow: inset 0px 0px 20px #17141d;
+  box-shadow: inset 0px 0px 20px #17141d;
 }
 
 .draw-back-curtain {
-    animation-name: shrink;
-    animation-duration: 2s;
-    animation-delay: 0.25s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: shrink;
+  animation-duration: 2s;
+  animation-delay: 0.25s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .cover {
-    width: 50vw;
+  width: 50vw;
 }
 
 /* Mobile View */
 @media only screen and (max-width: 700px) {
-    .callToAction div {
-        width: 80%;
-    }
+  .callToAction div {
+    width: 80%;
+  }
 
-    @keyframes grow {
-        from{width: 0px;}
-        to{width: 70vw;}
+  @keyframes grow {
+    from {
+      width: 0px;
     }
+    to {
+      width: 70vw;
+    }
+  }
 
-    .sectionHeader {
-        font-size: 4.5em;
-    }
+  .sectionHeader {
+    font-size: 4.5em;
+  }
 
-    .aboutCard {
-        width: 85vw;
-    }
+  .aboutCard {
+    width: 85vw;
+  }
 
-    .aboutCard p {
-        font-size: 1.75em;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
+  .aboutCard p {
+    font-size: 1.75em;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 
-    .schoolWrapper {
-        flex-direction: column;
-        padding-top: 15vh;
-        padding-bottom: 5vh;
-    }
+  .schoolWrapper {
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+  }
 
-    .card {
-        width: 85vw;
-    }
+  .card {
+    width: 85vw;
+  }
 
-    .card:not(:first-child) {
-        margin-left: 0px;
-    }
+  .card:not(:first-child) {
+    margin-left: 0px;
+  }
 
-    .card:click {
-        transform: translateY(-20px);
-        transition: 0.4s ease-out;
-    }
-    
-    .card:click ~ .card {
-        position: relative;
-        left: 50px;
-        transition: 0.4s ease-out;
-    }
+  .card:click {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
 
-    .card:click .filledbar {
-        width: 100%;
-    }
+  .card:click ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
 
-    .projContent {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
+  .card:click .filledbar {
+    width: 100%;
+  }
 
-    .projects .invitation {
-        width: 80vw;
-    }
+  .projContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
-    .workContent {
-        flex-direction: column;
-    }
+  .projects .invitation {
+    width: 80vw;
+  }
 
-    .jobCard {
-        height: 350px;
-    }
+  .workContent {
+    flex-direction: column;
+  }
 
-    .employerLabel {
-        font-size: 2em;
-    }
+  .jobCard {
+    height: 350px;
+  }
 
-    .collage {
-        grid-template-areas: 
-        "one"
-        "two"
-        "three"
-        "four"
-        "five";
-    }
+  .employerLabel {
+    font-size: 2em;
+  }
 
-    .skillBox {
-        height: 125vh;
-        width: 100vw;
-        border-radius: 0px;
-    }
+  .collage {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
 
-    .contact .invitation {
-        width: 80vw;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .skillBox {
+    height: 125vh;
+    width: 100vw;
+    border-radius: 0px;
+  }
 
-    .contactBox {
-        flex-direction: column;
-    }
+  .contact .invitation {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    .contactBox a {
-        font-size: 1.5em;
-    }
+  .contactBox {
+    flex-direction: column;
+  }
+
+  .contactBox a {
+    font-size: 1.5em;
+  }
 }
