@@ -976,7 +976,7 @@ body {
     width: 100%;
   }
 
-  .gradient_text {
+  .card ul li .gradient_text {
     background: none;
     -webkit-background-clip: none;
     background-clip: none;
