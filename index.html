@@ -10,6 +10,8 @@
     />
     <title>Luke Loera's Website</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="animateInView.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <section class="intro">
@@ -274,7 +276,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Ratio Calculator<br />(c++)</div>
         <div class="projContent">
           <div class="projDescription">
@@ -293,7 +295,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">MSP432 Interface<br />(c)</div>
         <div class="projContent">
           <div class="projDescription">
@@ -306,7 +308,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Hack Assembler<br />(Python)</div>
         <div class="projContent">
           <div class="projDescription">
@@ -323,7 +325,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Ironman Sign</div>
         <div class="projContent">
           <div class="projDescription">
@@ -346,7 +348,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Smart Mirror</div>
         <div class="projContent">
           <div class="projDescription">
@@ -366,7 +368,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Modern Bed</div>
         <div class="projContent">
           <div class="projDescription">
@@ -387,7 +389,7 @@
           </div>
         </div>
       </article>
-      <article class="projectCard hidden" id="extra">
+      <article class="projectCard hidden extra">
         <div class="projTitle gradient_text">Coffee Table</div>
         <div class="projContent">
           <div class="projDescription">
@@ -405,11 +407,12 @@
           </div>
         </div>
       </article>
-      <button id="projectBtn" type="button" onclick="showProjects()">
+      <button id="projectBtn" type="button" onclick="toggleProjects()">
         View More Projects
       </button>
     </section>
 
+    <!------------------ Work ------------------>
     <section class="work">
       <header class="sectionHeader">Work</header>
       <div class="leftSectionCurtain cover"></div>
@@ -426,7 +429,7 @@
             id="jobBtn1"
             class="collapsedBtn"
             type="button"
-            onclick="showJobDescription(1)"
+            onclick="toggleJobDescription(1)"
           >
             View Description
           </button>
@@ -455,7 +458,7 @@
             id="jobBtn2"
             class="collapsedBtn"
             type="button"
-            onclick="showJobDescription(2)"
+            onclick="toggleJobDescription(2)"
           >
             View Description
           </button>
@@ -484,7 +487,7 @@
             id="jobBtn3"
             class="collapsedBtn"
             type="button"
-            onclick="showJobDescription(3)"
+            onclick="toggleJobDescription(3)"
           >
             View Description
           </button>
@@ -571,8 +574,4 @@
       </div>
     </section>
   </body>
-
-  <!-- Load scripts -->
-  <script src="animateInView.js"></script>
-  <script src="app.js"></script>
 </html>
