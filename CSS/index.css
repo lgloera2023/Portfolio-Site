@@ -725,27 +725,27 @@ body {
 
 #a1 {
   grid-area: one;
-  background-image: url("marinesActivities.jpg");
+  background-image: url("../Images/marinesActivities.jpg");
 }
 
 #a2 {
   grid-area: two;
-  background-image: url("reconLogo.png");
+  background-image: url("../Images/reconLogo.png");
 }
 
 #a3 {
   grid-area: three;
-  background-image: url("brkawy.jpg");
+  background-image: url("../Images/brkawy.jpg");
 }
 
 #a4 {
   grid-area: four;
-  background-image: url("triathlon.jpg");
+  background-image: url("../Images/triathlon.jpg");
 }
 
 #a5 {
   grid-area: five;
-  background-image: url("navigators.png");
+  background-image: url("../Images/navigators.png");
 }
 
 .skills {
@@ -813,51 +813,51 @@ body {
 }
 
 .pythonLogo {
-  background-image: url("Skills/pythonLogo.png");
+  background-image: url("../Images/Skills/pythonLogo.png");
 }
 
 .cppLogo {
-  background-image: url("Skills/cppLogo.png");
+  background-image: url("../Images/Skills/cppLogo.png");
 }
 
 .javaLogo {
-  background-image: url("Skills/javaLogo.png");
+  background-image: url("../Images/Skills/javaLogo.png");
 }
 
 .htmlLogo {
-  background-image: url("Skills/htmlLogo.png");
+  background-image: url("../Images/Skills/htmlLogo.png");
 }
 
 .cssLogo {
-  background-image: url("Skills/cssLogo.png");
+  background-image: url("../Images/Skills/cssLogo.png");
 }
 
 .javascriptLogo {
-  background-image: url("Skills/javascriptLogo.png");
+  background-image: url("../Images/Skills/javascriptLogo.png");
 }
 
 .wordLogo {
-  background-image: url("Skills/wordLogo.png");
+  background-image: url("../Images/Skills/wordLogo.png");
 }
 
 .excelLogo {
-  background-image: url("Skills/excelLogo.png");
+  background-image: url("../Images/Skills/excelLogo.png");
 }
 
 .accessLogo {
-  background-image: url("Skills/accessLogo.png");
+  background-image: url("../Images/Skills/accessLogo.png");
 }
 
 .powerPointLogo {
-  background-image: url("Skills/powerPointLogo.png");
+  background-image: url("../Images/Skills/powerPointLogo.png");
 }
 
 .solderingLogo {
-  background-image: url("Skills/soldering.JPG");
+  background-image: url("../Images/Skills/soldering.JPG");
 }
 
 .scubaLogo {
-  background-image: url("Skills/scuba.JPG");
+  background-image: url("../Images/Skills/scuba.JPG");
 }
 
 .contact {

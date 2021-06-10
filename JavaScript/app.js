@@ -122,14 +122,14 @@ const toggleProjects = function () {
   let projBtn = document.querySelector("#projectBtn");
 
   // See if we are expanding or collapsing
-  if (projBtn.innerHTML == "View More Projects") {
+  if (projBtn.innerText == "View More Projects") {
     // Show more
     for (let i = 0; i < elements.length; i++) {
       elements[i].classList.replace("hidden", "show");
     }
 
     // Change button text
-    projBtn.innerHTML = "Show Less Projects";
+    projBtn.innerText = "Show Less Projects";
   } else {
     // Show less
     for (let i = 0; i < elements.length; i++) {
@@ -137,7 +137,7 @@ const toggleProjects = function () {
     }
 
     // Change button text
-    projBtn.innerHTML = "View More Projects";
+    projBtn.innerText = "View More Projects";
   }
 };
 
@@ -154,14 +154,14 @@ const toggleJobDescription = function (jobNum) {
     "#jobDescription" + jobNum.toString()
   );
   // See if we are expanding or collapsing
-  if (jobButton.innerHTML.trim() == "View Description") {
+  if (jobButton.innerText == "View Description") {
     // Show more
     if (!jobDescription.classList.replace("slide-down", "slide-up")) {
       jobDescription.classList.add("slide-up");
     }
 
     // Change button text and colors
-    jobButton.innerHTML = "Show Less";
+    jobButton.innerText = "Show Less";
     jobButton.classList.add("expandedBtn");
     jobButton.classList.remove("collapsedBtn");
   } else {
@@ -169,7 +169,7 @@ const toggleJobDescription = function (jobNum) {
     jobDescription.classList.replace("slide-up", "slide-down");
 
     // Change button text and colors
-    jobButton.innerHTML = "View Description";
+    jobButton.innerText = "View Description";
     jobButton.classList.remove("expandedBtn");
     jobButton.classList.add("collapsedBtn");
   }
