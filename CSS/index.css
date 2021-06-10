@@ -288,8 +288,7 @@ body {
 
 .about p {
   text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: 0 15%;
   font-size: 2em;
 }
 
@@ -312,8 +311,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
 }
 
 .schoolWrapper {
@@ -322,8 +320,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding: 10vh 0;
 }
 
 .card {
@@ -411,8 +408,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -426,8 +422,7 @@ body {
 
 .projectCard {
   width: 75vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin: 5vh 0;
   padding: 5vh;
   background-color: #17141d;
   color: wheat;
@@ -528,8 +523,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
 }
 
 .workContent {
@@ -544,8 +538,7 @@ body {
   min-height: 300px;
   height: 25vw;
   width: 25vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 5vh 0;
   padding: 2.5vh;
   background-color: #17141d;
   color: wheat;
@@ -719,8 +712,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
 }
 
 .collage {
@@ -789,8 +781,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
 }
 
 .skillBox {
@@ -816,8 +807,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   margin-right: 10px;
   display: flex;
   flex-direction: column;
@@ -904,8 +894,7 @@ body {
   background-color: white;
   width: 100vw;
   position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
+  padding: 25vh 0;
 }
 
 .contactBox {
@@ -918,8 +907,7 @@ body {
   box-shadow: 0px 0px 20px black;
   display: flex;
   flex-direction: row;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   margin-top: 100px;
   align-items: center;
   justify-content: space-around;
@@ -972,8 +960,7 @@ body {
 
   .aboutCard p {
     font-size: 1.75em;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 5%;
   }
 
   .schoolWrapper {
@@ -1014,17 +1001,21 @@ body {
     font-style: italic;
   }
 
-  .projContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
   .projects .invitation {
     width: 80vw;
   }
 
+  .projContent {
+    display: block;
+  }
+
+  .projDescription {
+    margin-bottom: 25px;
+  }
+
   .workContent {
     flex-direction: column;
+    gap: 25px;
   }
 
   .jobCard {
