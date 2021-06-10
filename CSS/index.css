@@ -1,60 +1,10 @@
+/* ------------------------------------------- */
+/*                   Global                    */
+/* ------------------------------------------- */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.intro {
-  min-height: 100vh;
-  width: 100vw;
-  background-color: black;
-  color: white;
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
-.generalInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.name {
-  position: relative;
-  opacity: 0;
-  animation-name: appear;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-  font-size: 7em;
-  text-align: center;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animatedBar {
-  background-color: white;
-  height: 5px;
-  width: 0%;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-name: grow;
-  animation-iteration-count: 1;
-  animation-duration: 1.75s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2s;
 }
 
 @keyframes grow {
@@ -66,57 +16,6 @@ body {
   }
 }
 
-.role {
-  position: relative;
-  margin-top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2em;
-  z-index: 0;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.leftCurtain {
-  background-color: black;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  animation-name: shrink1;
-  animation-duration: 1.75s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  animation-delay: 2s;
-  z-index: 1;
-}
-
-.rightCurtain {
-  background-color: black;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  animation-name: shrink1;
-  animation-duration: 1.75s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  animation-delay: 2s;
-  z-index: 1;
-}
-
-@keyframes shrink1 {
-  from {
-    width: 50%;
-  }
-  to {
-    width: 0%;
-  }
-}
-
 @keyframes shrink {
   from {
     width: 50vw;
@@ -124,88 +23,6 @@ body {
   to {
     width: 0vw;
   }
-}
-
-.callToAction {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 2.5em;
-  opacity: 0;
-  animation-name: appear;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 4s;
-}
-
-.about {
-  background-color: white;
-  width: 100vw;
-  margin-top: 25vh;
-  padding-top: 15vh;
-  padding-bottom: 25vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about a img {
-  height: 250px;
-  border-radius: 10px;
-  margin-top: 25px;
-  transition: 0.25s ease-in-out;
-}
-
-.about a img:hover {
-  box-shadow: 0px 0px 20px black;
-}
-
-#resume {
-  margin-top: 25px;
-  text-decoration: none;
-  background-color: #17141d;
-  color: wheat;
-  border-radius: 10px;
-  padding: 15px;
-  font-size: 2em;
-  font-weight: bold;
-  max-width: 80vw;
-  text-align: center;
-}
-
-#resume:hover {
-  box-shadow: 0px 0px 20px black;
-}
-
-.about p {
-  text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: 2em;
-}
-
-.about h2 {
-  font-size: 3em;
-}
-
-.aboutCard {
-  background-color: #17141d;
-  box-shadow: 0px 0px 20px black;
-  border-radius: 10px;
-  width: 60vw;
-  color: wheat;
-}
-
-.school {
-  background-color: white;
-  width: 100vw;
-  position: relative;
-  padding-top: 25vh;
-  padding-bottom: 25vh;
 }
 
 .sectionHeader {
@@ -273,6 +90,230 @@ body {
 
 .invitation a:hover {
   font-weight: bold;
+}
+
+.gradient_text {
+  font-weight: bold;
+  background: -webkit-radial-gradient(wheat, maroon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: relative;
+}
+
+.draw-back-curtain {
+  animation-name: shrink;
+  animation-duration: 2s;
+  animation-delay: 0.25s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cover {
+  width: 50vw;
+}
+
+/* ------------------------------------------- */
+/*                Landing View                 */
+/* ------------------------------------------- */
+.intro {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.name {
+  position: relative;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  font-size: 7em;
+  text-align: center;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animatedBar {
+  background-color: white;
+  height: 5px;
+  width: 0%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: grow;
+  animation-iteration-count: 1;
+  animation-duration: 1.75s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.role {
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  z-index: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.leftCurtain {
+  background-color: black;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: shrink1;
+  animation-duration: 1.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  z-index: 1;
+}
+
+.rightCurtain {
+  background-color: black;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: shrink1;
+  animation-duration: 1.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  z-index: 1;
+}
+
+@keyframes shrink1 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.callToAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5em;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+
+/* ------------------------------------------- */
+/*                  About Me                   */
+/* ------------------------------------------- */
+.about {
+  background-color: white;
+  width: 100vw;
+  margin-top: 25vh;
+  padding-top: 15vh;
+  padding-bottom: 25vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about a img {
+  height: 250px;
+  border-radius: 10px;
+  margin-top: 25px;
+  transition: 0.25s ease-in-out;
+}
+
+.about a img:hover {
+  box-shadow: 0px 0px 20px black;
+}
+
+#resume {
+  margin-top: 25px;
+  text-decoration: none;
+  background-color: #17141d;
+  color: wheat;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 2em;
+  font-weight: bold;
+  max-width: 80vw;
+  text-align: center;
+}
+
+#resume:hover {
+  box-shadow: 0px 0px 20px black;
+}
+
+.about p {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 2em;
+}
+
+.about h2 {
+  font-size: 3em;
+}
+
+.aboutCard {
+  background-color: #17141d;
+  box-shadow: 0px 0px 20px black;
+  border-radius: 10px;
+  width: 60vw;
+  color: wheat;
+}
+
+/* ------------------------------------------- */
+/*                  Education                  */
+/* ------------------------------------------- */
+.school {
+  background-color: white;
+  width: 100vw;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 25vh;
 }
 
 .schoolWrapper {
@@ -363,14 +404,9 @@ body {
   padding-bottom: 25px;
 }
 
-.gradient_text {
-  font-weight: bold;
-  background: -webkit-radial-gradient(wheat, maroon);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* ------------------------------------------- */
+/*                  Projects                   */
+/* ------------------------------------------- */
 .projects {
   background-color: white;
   width: 100vw;
@@ -464,14 +500,6 @@ body {
   box-shadow: 0px 0px 20px wheat;
 }
 
-.hidden {
-  display: none;
-}
-
-.show {
-  display: relative;
-}
-
 #projectBtn {
   background-color: #17141d;
   color: wheat;
@@ -493,6 +521,9 @@ body {
   box-shadow: inset 0px 0px 10px wheat;
 }
 
+/* ------------------------------------------- */
+/*                   Work                      */
+/* ------------------------------------------- */
 .work {
   background-color: white;
   width: 100vw;
@@ -681,6 +712,9 @@ body {
   }
 }
 
+/* ------------------------------------------- */
+/*                Activities                   */
+/* ------------------------------------------- */
 .activities {
   background-color: white;
   width: 100vw;
@@ -748,6 +782,9 @@ body {
   background-image: url("../Images/navigators.png");
 }
 
+/* ------------------------------------------- */
+/*                  Skills                     */
+/* ------------------------------------------- */
 .skills {
   background-color: white;
   width: 100vw;
@@ -860,6 +897,9 @@ body {
   background-image: url("../Images/Skills/scuba.JPG");
 }
 
+/* ------------------------------------------- */
+/*                  Contact                    */
+/* ------------------------------------------- */
 .contact {
   background-color: white;
   width: 100vw;
@@ -905,20 +945,9 @@ body {
   box-shadow: inset 0px 0px 20px #17141d;
 }
 
-.draw-back-curtain {
-  animation-name: shrink;
-  animation-duration: 2s;
-  animation-delay: 0.25s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.cover {
-  width: 50vw;
-}
-
-/* Mobile View */
+/* ------------------------------------------- */
+/*             Responsive Design               */
+/* ------------------------------------------- */
 @media only screen and (max-width: 700px) {
   .callToAction div {
     width: 80%;
