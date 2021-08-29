@@ -174,3 +174,18 @@ const toggleJobDescription = function (jobNum) {
     jobButton.classList.add("collapsedBtn");
   }
 };
+
+// Elements
+var coffeeImg = document.querySelector("#coffeeTableImg");
+var tvImg = document.querySelector("#tvPanelImg");
+var rackImg = document.querySelector("#towelRackImg");
+
+// Listeners
+coffeeImg.addEventListener("mouseenter", () => { coffeeImg.setAttribute("src", "Images/coffee-table-real.PNG") });
+coffeeImg.addEventListener("mouseleave", () => { coffeeImg.setAttribute("src", "Images/coffeeTable.png") });
+
+tvImg.addEventListener("mouseenter", () => { tvImg.setAttribute("src", "Images/tv-panel-real.jpg") });
+tvImg.addEventListener("mouseleave", () => { tvImg.setAttribute("src", "Images/tvPanel.png") });
+
+rackImg.addEventListener("mouseenter", () => { rackImg.setAttribute("src", "Images/towel-rack-shelf-real.PNG") });
+rackImg.addEventListener("mouseleave", () => { rackImg.setAttribute("src", "Images/towelRackShelf.png") });
